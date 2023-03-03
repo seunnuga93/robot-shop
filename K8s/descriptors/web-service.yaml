@@ -6,14 +6,16 @@ metadata:
     kompose.version: 1.10.0 (8bb0907)
   creationTimestamp: null
   labels:
-   app: web
+    app: web
   name: web
 spec:
+  type: NodePort
   ports:
   - name: "8080"
     port: 8080
     targetPort: 8080
+    nodePort: 30080
   selector:
-   app: web
+    app: web
 status:
   loadBalancer: {}
