@@ -4,11 +4,13 @@ metadata:
   annotations:
     kompose.cmd: kompose -f ../docker-compose.yaml convert
     kompose.version: 1.10.0 (8bb0907)
-  creationTimestamp: null
   labels:
    app: web
   name: web
 spec:
+  selector:
+    matchLabels:
+      app: web
   replicas: 1
   strategy: {}
   template:

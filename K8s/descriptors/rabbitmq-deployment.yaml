@@ -4,11 +4,13 @@ metadata:
   annotations:
     kompose.cmd: kompose -f ../docker-compose.yaml convert
     kompose.version: 1.10.0 (8bb0907)
-  creationTimestamp: null
   labels:
    app: rabbitmq
   name: rabbitmq
 spec:
+  selector:
+    matchLabels:
+      app: rabbitmq
   replicas: 1
   strategy: {}
   template:
